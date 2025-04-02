@@ -1,1 +1,13 @@
 @import 'tailwindcss';
+
+@theme {
+	/* Custom Colors */
+	--color-primary: #caf0f8;
+	--color-secondary: #0d0842;
+	--color-blackBG: #f3f3f3;
+	--color-favorite: #ff5841;
+
+	/* Custom Font Families */
+	--font-primary: Montserrat, sans-serif;
+	--font-secondary: 'Nunito Sans', sans-serif;
+}
