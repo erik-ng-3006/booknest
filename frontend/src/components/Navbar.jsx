@@ -1,13 +1,12 @@
 import React from 'react';
-import { href, Link } from 'react-router-dom';
-import { HiMiniBars3CenterLeft } from 'react-icons/hi2';
+import { Link } from 'react-router-dom';
 import { IoSearchOutline } from 'react-icons/io5';
 import { HiOutlineUser } from 'react-icons/hi';
 import { HiOutlineHeart } from 'react-icons/hi';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { RxAvatar } from 'react-icons/rx';
 import { useState } from 'react';
-
+import logo from '../assets/logo.png';
 const navigation = [
 	{
 		name: 'Dashboard',
@@ -30,12 +29,12 @@ const Navbar = () => {
 	const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 	const currentUser = true;
 	return (
-		<header className='max-screen-2xl mx-auto px-4 py-6 '>
+		<header className='max-w-screen-2xl mx-auto px-4 py-6 '>
 			<nav className='flex justify-between items-center'>
 				{/* Left Side */}
 				<div className='flex items-center md:gap-16 gap-4'>
-					<Link to='/'>
-						<HiMiniBars3CenterLeft className='size-6 ' />
+					<Link to='/' className='flex items-center gap-2'>
+						<img src={logo} alt='logo' className='md:w-30 w-20' />
 					</Link>
 					{/* Search Bar */}
 					<div className='relative sm:w-72 w-40 space-x-2'>
