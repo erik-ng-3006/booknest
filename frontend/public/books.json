@@ -1,0 +1,202 @@
+[
+	{
+		"_id": 1,
+		"title": "The Let Them Theory",
+		"description": "Mel Robbins offers transformative insights into personal growth and self-help strategies.",
+		"category": "Self-Help",
+		"trending": true,
+		"coverImage": "the-let-them-theory.jpg",
+		"oldPrice": 27.0,
+		"newPrice": 19.99
+	},
+	{
+		"_id": 2,
+		"title": "Onyx Storm (Deluxe Limited Edition)",
+		"description": "Rebecca Yarros continues the Empyrean series with an enthralling fantasy adventure.",
+		"category": "Fantasy",
+		"trending": true,
+		"coverImage": "onyx-storm-deluxe.jpg",
+		"oldPrice": 30.0,
+		"newPrice": 24.99
+	},
+	{
+		"_id": 3,
+		"title": "Sunrise on the Reaping",
+		"description": "Suzanne Collins returns to Panem in this gripping prequel to the Hunger Games series.",
+		"category": "Young Adult",
+		"trending": true,
+		"coverImage": "sunrise-on-the-reaping.jpg",
+		"oldPrice": 28.0,
+		"newPrice": 22.99
+	},
+	{
+		"_id": 4,
+		"title": "Deep End",
+		"description": "Ali Hazelwood delivers a compelling romance set against the backdrop of academic life.",
+		"category": "Romance",
+		"trending": true,
+		"coverImage": "deep-end.jpg",
+		"oldPrice": 26.0,
+		"newPrice": 20.99
+	},
+	{
+		"_id": 5,
+		"title": "Dog Man: Big Jim Begins",
+		"description": "Dav Pilkey's latest installment in the Dog Man series brings humor and adventure for young readers.",
+		"category": "Children's",
+		"trending": true,
+		"coverImage": "dog-man-big-jim-begins.jpg",
+		"oldPrice": 12.99,
+		"newPrice": 9.99
+	},
+	{
+		"_id": 6,
+		"title": "The Crash",
+		"description": "Freida McFadden crafts a psychological thriller that keeps readers on the edge of their seats.",
+		"category": "Thriller",
+		"trending": true,
+		"coverImage": "the-crash.jpg",
+		"oldPrice": 25.0,
+		"newPrice": 18.99
+	},
+	{
+		"_id": 7,
+		"title": "Fourth Wing",
+		"description": "Rebecca Yarros introduces a new realm of dragons and warriors in this captivating fantasy.",
+		"category": "Fantasy",
+		"trending": true,
+		"coverImage": "fourth-wing.jpg",
+		"oldPrice": 29.0,
+		"newPrice": 23.99
+	},
+	{
+		"_id": 8,
+		"title": "Scythe & Sparrow",
+		"description": "Brynne Weaver's latest novel explores themes of love and destiny in a dystopian world.",
+		"category": "Science Fiction",
+		"trending": true,
+		"coverImage": "scythe-and-sparrow.jpg",
+		"oldPrice": 27.0,
+		"newPrice": 21.99
+	},
+	{
+		"_id": 9,
+		"title": "Iron Flame",
+		"description": "Rebecca Yarros continues her epic fantasy saga with intrigue and adventure.",
+		"category": "Fantasy",
+		"trending": true,
+		"coverImage": "iron-flame.jpg",
+		"oldPrice": 28.0,
+		"newPrice": 22.99
+	},
+	{
+		"_id": 10,
+		"title": "The Housemaid",
+		"description": "Freida McFadden presents a suspenseful tale of secrets and deception.",
+		"category": "Mystery",
+		"trending": true,
+		"coverImage": "the-housemaid.jpg",
+		"oldPrice": 24.0,
+		"newPrice": 17.99
+	},
+	{
+		"_id": 11,
+		"title": "Atomic Habits",
+		"description": "James Clear provides practical strategies for forming good habits and breaking bad ones.",
+		"category": "Self-Help",
+		"trending": true,
+		"coverImage": "atomic-habits.jpg",
+		"oldPrice": 26.0,
+		"newPrice": 20.99
+	},
+	{
+		"_id": 12,
+		"title": "Beautiful Ugly",
+		"description": "Alice Feeney's latest novel delves into the complexities of human relationships.",
+		"category": "Fiction",
+		"trending": true,
+		"coverImage": "beautiful-ugly.jpg",
+		"oldPrice": 27.0,
+		"newPrice": 21.99
+	},
+	{
+		"_id": 13,
+		"title": "Great Big Beautiful Life",
+		"description": "Emily Henry crafts a heartwarming story about love and self-discovery.",
+		"category": "Romance",
+		"trending": true,
+		"coverImage": "great-big-beautiful-life.jpg",
+		"oldPrice": 26.0,
+		"newPrice": 20.99
+	},
+	{
+		"_id": 14,
+		"title": "Audition",
+		"description": "Katie Kitamura explores themes of identity and performance in this thought-provoking novel.",
+		"category": "Literary Fiction",
+		"trending": true,
+		"coverImage": "audition.jpg",
+		"oldPrice": 25.0,
+		"newPrice": 19.99
+	},
+	{
+		"_id": 15,
+		"title": "My Friends",
+		"description": "Fredrik Backman delivers a poignant tale of friendship and the passage of time.",
+		"category": "Fiction",
+		"trending": true,
+		"coverImage": "my-friends.jpg",
+		"oldPrice": 28.0,
+		"newPrice": 22.99
+	},
+	{
+		"_id": 16,
+		"title": "Atmosphere",
+		"description": "Taylor Jenkins Reid takes readers to the 1980s NASA Space Shuttle program in this engaging novel.",
+		"category": "Historical Fiction",
+		"trending": true,
+		"coverImage": "atmosphere.jpg",
+		"oldPrice": 27.0,
+		"newPrice": 21.99
+	},
+	{
+		"_id": 17,
+		"title": "The Midnight Library",
+		"description": "Matt Haig explores the infinite possibilities of life in this heartwarming novel.",
+		"category": "Fiction",
+		"trending": true,
+		"coverImage": "the-midnight-library.jpg",
+		"oldPrice": 26.0,
+		"newPrice": 19.99
+	},
+	{
+		"_id": 18,
+		"title": "The Creative Act: A Way of Being",
+		"description": "Rick Rubin shares profound insights into the creative process and artistic inspiration.",
+		"category": "Self-Help",
+		"trending": true,
+		"coverImage": "the-creative-act.jpg",
+		"oldPrice": 30.0,
+		"newPrice": 24.99
+	},
+	{
+		"_id": 19,
+		"title": "Lessons in Chemistry",
+		"description": "Bonnie Garmus tells the story of a brilliant woman who challenges societal norms in the 1960s.",
+		"category": "Historical Fiction",
+		"trending": true,
+		"coverImage": "lessons-in-chemistry.jpg",
+		"oldPrice": 28.0,
+		"newPrice": 22.99
+	},
+	{
+		"_id": 20,
+		"title": "The Covenant of Water",
+		"description": "Abraham Verghese crafts an epic tale spanning generations in South India.",
+		"category": "Literary Fiction",
+		"trending": true,
+		"coverImage": "the-covenant-of-water.jpg",
+		"oldPrice": 32.0,
+		"newPrice": 26.99
+	}
+]

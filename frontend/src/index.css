@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import 'tailwindcss';
 
 @theme {
 	/* Custom Colors */
-	--color-primary: #caf0f8;
+	--color-primary: #76c893;
 	--color-secondary: #0d0842;
 	--color-blackBG: #f3f3f3;
 	--color-favorite: #ff5841;
