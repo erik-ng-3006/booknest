@@ -34,7 +34,7 @@ const Navbar = () => {
 				{/* Left Side */}
 				<div className='flex items-center md:gap-16 gap-4'>
 					<Link to='/' className='flex items-center gap-2'>
-						<img src={logo} alt='logo' className='md:w-30 w-20' />
+						<img src={logo} alt='logo' className='w-20' />
 					</Link>
 					{/* Search Bar */}
 					<div className='relative sm:w-72 w-40 space-x-2'>
