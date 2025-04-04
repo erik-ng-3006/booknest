@@ -40,8 +40,6 @@ const Recommended = () => {
 					},
 				}}
 				modules={[Pagination, Navigation]}
-				onSlideChange={() => console.log('slide change')}
-				onSwiper={(swiper) => console.log(swiper)}
 				className='mySwiper'
 				navigation
 			>
