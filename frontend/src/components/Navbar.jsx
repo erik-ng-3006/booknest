@@ -34,7 +34,7 @@ const Navbar = () => {
 
 	const currentUser = false;
 	return (
-		<header className='max-w-screen-2xl mx-auto px-4 py-6 '>
+		<header className='max-w-screen-2xl mx-auto px-4 py-6 sticky top-0 z-50 bg-zinc-50 opacity-90'>
 			<nav className='flex justify-between items-center'>
 				{/* Left Side */}
 				<div className='flex items-center md:gap-16 gap-4'>
