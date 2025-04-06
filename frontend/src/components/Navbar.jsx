@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IoSearchOutline } from 'react-icons/io5';
 import { HiOutlineUser } from 'react-icons/hi';
@@ -8,6 +8,7 @@ import { RxAvatar } from 'react-icons/rx';
 import { useState } from 'react';
 import logo from '../assets/logo.png';
 import { useSelector } from 'react-redux';
+import { useAuth } from '../context/AuthContext';
 
 const navigation = [
 	{
@@ -32,7 +33,26 @@ const Navbar = () => {
 
 	const cartItems = useSelector((state) => state.cart.cartItems);
 
-	const currentUser = false;
+	const { currentUser, logout } = useAuth();
+
+	const dropDownRef = useRef(null);
+
+	const handleClickOutside = (event) => {
+		if (
+			dropDownRef.current &&
+			!dropDownRef.current.contains(event.target)
+		) {
+			setIsDropDownOpen(false);
+		}
+	};
+
+	useEffect(() => {
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, []);
+
 	return (
 		<header className='max-w-screen-2xl mx-auto px-4 py-6 sticky top-0 z-50 bg-zinc-50 opacity-90'>
 			<nav className='flex justify-between items-center'>
@@ -68,7 +88,10 @@ const Navbar = () => {
 								</button>
 								{/* Dropdown */}
 								{isDropDownOpen && (
-									<div className='absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40'>
+									<div
+										ref={dropDownRef}
+										className='absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40'
+									>
 										<ul>
 											{navigation.map((item) => (
 												<li
@@ -83,6 +106,15 @@ const Navbar = () => {
 													</Link>
 												</li>
 											))}
+											<li>
+												<button
+													type='button'
+													className='blog px-4 py-2 text-sm hover:bg-gray-100 hover:cursor-pointer'
+													onClick={logout}
+												>
+													Logout
+												</button>
+											</li>
 										</ul>
 									</div>
 								)}

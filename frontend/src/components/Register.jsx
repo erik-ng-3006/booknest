@@ -2,16 +2,37 @@ import React, { useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Register = () => {
 	const [message, setMessage] = useState('');
 	const { register, handleSubmit } = useForm();
+	const { registerUser, signInWithGoogle } = useAuth();
+	const navigate = useNavigate();
 
-	const onSubmit = (data) => {
-		console.log(data);
+	const onSubmit = async (data) => {
+		try {
+			await registerUser(data.email, data.password);
+			navigate('/');
+			toast.success('Registration successful');
+		} catch (error) {
+			setMessage(error.message);
+			console.log(error);
+		}
 	};
 
-	const handleGoogleSignIn = () => {};
+	const handleGoogleSignIn = async () => {
+		try {
+			await signInWithGoogle();
+			navigate('/');
+			toast.success('Login successful');
+		} catch (error) {
+			setMessage(error.message);
+			console.log(error);
+		}
+	};
 
 	return (
 		<div className='h-[calc(100vh-120px)] flex items-center justify-center'>
