@@ -3,10 +3,16 @@ import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { useCreateOrderMutation } from '../../redux/features/orders/ordersApi';
+import LoadingSpinner from '../../components/LoadingSpinner';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import { clearCart } from '../../redux/features/cart/cartSlice';
 const CheckoutPage = () => {
-	const [isChecked, setIsChecked] = useState(true);
+	const [isChecked, setIsChecked] = useState(false);
 	const { cartItems } = useSelector((state) => state.cart);
 	const { currentUser } = useAuth();
+	const navigate = useNavigate();
 
 	const totalPrice = cartItems
 		.reduce((total, item) => {
@@ -17,9 +23,11 @@ const CheckoutPage = () => {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors },
+		formState: { _errors },
 	} = useForm();
-	const onSubmit = (data) => {
+
+	const [createOrder, { isLoading }] = useCreateOrderMutation();
+	const onSubmit = async (data) => {
 		const newOrder = {
 			name: data.name,
 			email: currentUser?.email,
@@ -35,8 +43,25 @@ const CheckoutPage = () => {
 		};
 
 		console.log(newOrder);
+
+		try {
+			await createOrder(newOrder).unwrap();
+			clearCart();
+			navigate('/orders');
+			toast.success('Order placed successfully');
+		} catch (error) {
+			console.log(error);
+			toast.error('Failed to place order');
+		}
 	};
 
+	if (isLoading) {
+		return (
+			<div className='flex items-center justify-center h-screen'>
+				<LoadingSpinner />
+			</div>
+		);
+	}
 	return (
 		<section className='bg-gray-100 min-h-screen rounded-xs'>
 			<div className='min-h-screen p-6 flex items-center justify-center'>
@@ -73,6 +98,9 @@ const CheckoutPage = () => {
 												Full Name
 											</label>
 											<input
+												{...register('name', {
+													required: true,
+												})}
 												type='text'
 												name='name'
 												id='name'
@@ -85,6 +113,9 @@ const CheckoutPage = () => {
 												Email Address
 											</label>
 											<input
+												{...register('email', {
+													required: true,
+												})}
 												type='text'
 												name='email'
 												id='email'
@@ -101,6 +132,9 @@ const CheckoutPage = () => {
 												Phone Number
 											</label>
 											<input
+												{...register('phone', {
+													required: true,
+												})}
 												type='number'
 												name='phone'
 												id='phone'
@@ -114,6 +148,9 @@ const CheckoutPage = () => {
 												Address / Street
 											</label>
 											<input
+												{...register('address', {
+													required: true,
+												})}
 												type='text'
 												name='address'
 												id='address'
@@ -125,6 +162,9 @@ const CheckoutPage = () => {
 										<div className='md:col-span-2'>
 											<label htmlFor='city'>City</label>
 											<input
+												{...register('city', {
+													required: true,
+												})}
 												type='text'
 												name='city'
 												id='city'
@@ -139,6 +179,9 @@ const CheckoutPage = () => {
 											</label>
 											<div className='h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1'>
 												<input
+													{...register('country', {
+														required: true,
+													})}
 													name='country'
 													id='country'
 													placeholder='Country'
@@ -196,6 +239,9 @@ const CheckoutPage = () => {
 											</label>
 											<div className='h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1'>
 												<input
+													{...register('state', {
+														required: true,
+													})}
 													name='state'
 													id='state'
 													placeholder='State'
@@ -249,6 +295,9 @@ const CheckoutPage = () => {
 												Zipcode
 											</label>
 											<input
+												{...register('zipcode', {
+													required: true,
+												})}
 												type='text'
 												name='zipcode'
 												id='zipcode'
@@ -264,6 +313,10 @@ const CheckoutPage = () => {
 													name='billing_same'
 													id='billing_same'
 													className='form-checkbox'
+													checked={isChecked}
+													onChange={() =>
+														setIsChecked(!isChecked)
+													}
 												/>
 												<label
 													htmlFor='billing_same'

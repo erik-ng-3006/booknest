@@ -69,4 +69,18 @@ const deleteById = async (req, res) => {
 	}
 };
 
-module.exports = { create, findAll, findById, update, deleteById };
+const findByEmail = async (req, res) => {
+	try {
+		const orders = await Order.find({ email: req.params.email }).sort({
+			createdAt: -1,
+		});
+		if (!orders) {
+			return res.status(404).send({ message: 'Orders not found' });
+		}
+		res.status(200).send(orders);
+	} catch (error) {
+		res.status(500).send({ message: 'Error finding orders' });
+	}
+};
+
+module.exports = { create, findAll, findById, update, deleteById, findByEmail };
