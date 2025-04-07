@@ -106,10 +106,9 @@ const Navbar = () => {
 													</Link>
 												</li>
 											))}
-											<li>
+											<li className='blog px-4 py-2 text-sm hover:bg-gray-100 hover:cursor-pointer'>
 												<button
 													type='button'
-													className='blog px-4 py-2 text-sm hover:bg-gray-100 hover:cursor-pointer'
 													onClick={logout}
 												>
 													Logout
