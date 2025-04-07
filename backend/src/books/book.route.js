@@ -7,15 +7,16 @@ const {
 	update,
 	deleteById,
 } = require('./book.controller');
+const verifyToken = require('../middleware/verifyToken');
 
-router.post('/create', create);
+router.post('/create', verifyToken, create);
 
 router.get('/', findAll);
 
 router.get('/:id', findById);
 
-router.put('/:id', update);
+router.put('/:id', verifyToken, update);
 
-router.delete('/:id', deleteById);
+router.delete('/:id', verifyToken, deleteById);
 
 module.exports = router;
