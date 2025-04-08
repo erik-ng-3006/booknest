@@ -12,10 +12,10 @@ import OrderPage from '../pages/orders/OrderPage';
 import AdminRoute from './AdminRoute';
 import AdminLogin from '../components/AdminLogin';
 import DashboardLayout from '../pages/dashboard/DashboardLayout';
-import Dashboard from '../pages/dashboard/DashBoard';
 import ManageBooks from '../pages/dashboard/ManageBooks';
 import AddBook from '../pages/dashboard/addBook/AddBook';
 import EditBook from '../pages/dashboard/EditBook';
+import Dashboard from '../pages/dashboard/Dashboard';
 
 const router = createBrowserRouter([
 	{
