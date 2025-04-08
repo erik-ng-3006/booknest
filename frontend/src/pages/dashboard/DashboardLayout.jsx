@@ -239,7 +239,7 @@ const DashboardLayout = () => {
 							</Link>
 							<Link
 								to='/dashboard/create-book'
-								className='inline-flex px-5 py-3 text-white bg-lime-600 hover:bg-lime-700 focus:bg-lime-700 rounded-md ml-6 mb-3'
+								className='inline-flex px-5 py-3 text-white bg-lime-600 hover:bg-lime-700 focus:bg-lime-700 rounded-md md:ml-6 mb-3'
 							>
 								<svg
 									aria-hidden='true'

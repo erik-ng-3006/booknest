@@ -13,6 +13,9 @@ import AdminRoute from './AdminRoute';
 import AdminLogin from '../components/AdminLogin';
 import DashboardLayout from '../pages/dashboard/DashboardLayout';
 import Dashboard from '../pages/dashboard/DashBoard';
+import ManageBooks from '../pages/dashboard/ManageBooks';
+import AddBook from '../pages/dashboard/addBook/AddBook';
+import EditBook from '../pages/dashboard/EditBook';
 
 const router = createBrowserRouter([
 	{
@@ -30,10 +33,6 @@ const router = createBrowserRouter([
 						<OrderPage />
 					</PrivateRoute>
 				),
-			},
-			{
-				path: '/about',
-				element: <h1>About</h1>,
 			},
 			{
 				path: '/login',
@@ -81,7 +80,7 @@ const router = createBrowserRouter([
 				path: 'create-book',
 				element: (
 					<AdminRoute>
-						<h1>Create Book</h1>
+						<AddBook />
 					</AdminRoute>
 				),
 			},
@@ -89,7 +88,7 @@ const router = createBrowserRouter([
 				path: 'edit-book/:id',
 				element: (
 					<AdminRoute>
-						<h1>Edit Book</h1>
+						<EditBook />
 					</AdminRoute>
 				),
 			},
@@ -97,7 +96,7 @@ const router = createBrowserRouter([
 				path: 'manage-books',
 				element: (
 					<AdminRoute>
-						<h1>Manage Book</h1>
+						<ManageBooks />
 					</AdminRoute>
 				),
 			},
