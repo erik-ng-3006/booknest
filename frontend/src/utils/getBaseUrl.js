@@ -1,3 +1,3 @@
 export default () => {
-	return 'https://booknest-app-backend.vercel.app/';
+	return 'https://booknest-app-backend.vercel.app';
 };
